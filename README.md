@@ -15,6 +15,8 @@ Use
     quote.em('foo'); // *foo*
     quote.bold('foo'); // **foo**
 
+Built on top of [quote](https://github.com/bahmutov/quote)
+
 Author: Gleb Bahmutov &copy; 2014
 [@bahmutov](https://twitter.com/bahmutov) [glebbahmutov.com](http://glebbahmutov.com)
 
