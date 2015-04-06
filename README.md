@@ -8,14 +8,23 @@
 
 Use
 
-    var quote = require('quote-markdown');
-    quote.string('foo'); // "foo"
-    quote.code('foo'); // `foo`
-    quote.code(quote.code('foo')); // `foo`
-    quote.em('foo'); // *foo*
-    quote.bold('foo'); // **foo**
+```js
+var quote = require('quote-markdown');
+quote.string('foo'); // "foo"
+quote.code('foo'); // `foo`
+quote.code(quote.code('foo')); // `foo`
+quote.em('foo'); // *foo*
+quote.bold('foo'); // **foo**
+```
 
-Built on top of [quote](https://github.com/bahmutov/quote)
+Built on top of [quote](https://github.com/bahmutov/quote), great for use with
+[debug-logdown](https://github.com/bahmutov/debug-logdown)
+
+```js
+var log = require('debug-logdown')('user');
+var quote = require('quote-markdown');
+log.info('user', quote.em(username), 'logged in at', quote.bold(new Date()));
+```    
 
 Author: Gleb Bahmutov &copy; 2014
 [@bahmutov](https://twitter.com/bahmutov) [glebbahmutov.com](http://glebbahmutov.com)
